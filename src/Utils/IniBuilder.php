@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Payload.
+ *
+ * (c) Brian Faust <hello@brianfaust.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace BrianFaust\Payload\Utils;
 
 class IniBuilder
@@ -57,7 +66,7 @@ class IniBuilder
             return (string) $value;
         }
 
-        if (is_string($value) && ctype_alnum($value) && !is_numeric($value)) {
+        if (is_string($value) && ctype_alnum($value) && ! is_numeric($value)) {
             return (string) $value;
         }
 
