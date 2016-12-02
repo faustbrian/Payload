@@ -21,7 +21,7 @@ class YamlUnserialiser implements Unserialiser
     {
         $contents = Yaml::parse($input);
 
-        if (! is_null($class)) {
+        if (!is_null($class)) {
             return (new Mapper())->map($contents, $class);
         }
 

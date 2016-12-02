@@ -20,7 +20,7 @@ class IniUnserialiser implements Unserialiser
     {
         $contents = json_decode(json_encode(parse_ini_string($input, true)));
 
-        if (! is_null($class)) {
+        if (!is_null($class)) {
             return (new Mapper())->map($contents, $class);
         }
 

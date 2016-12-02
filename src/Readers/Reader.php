@@ -24,7 +24,7 @@ abstract class Reader
     {
         $extension = File::extension($path);
 
-        if (! in_array($extension, $this->extensions)) {
+        if (!in_array($extension, $this->extensions)) {
             throw new InvalidFileTypeException(
                 sprintf('%s is an invalid file type for the %s class', $extension, get_class($this)));
         }

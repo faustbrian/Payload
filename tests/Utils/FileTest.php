@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Tests\Payload\Utils;
 
-use BrianFaust\Payload\Utils\File;
 use BrianFaust\Payload\Exceptions\FileDoesNotExistException;
+use BrianFaust\Payload\Utils\File;
 
 class FileTest extends AbstractTestCase
 {

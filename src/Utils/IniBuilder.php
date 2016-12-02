@@ -66,7 +66,7 @@ class IniBuilder
             return (string) $value;
         }
 
-        if (is_string($value) && ctype_alnum($value) && ! is_numeric($value)) {
+        if (is_string($value) && ctype_alnum($value) && !is_numeric($value)) {
             return (string) $value;
         }
 
