@@ -19,7 +19,7 @@ class Ini
 {
     protected $normaliser;
 
-    public function __construct(): void
+    public function __construct()
     {
         $this->normaliser = new IniNormaliser();
     }

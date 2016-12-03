@@ -19,7 +19,7 @@ class Json
 {
     protected $normaliser;
 
-    public function __construct(): void
+    public function __construct()
     {
         $this->normaliser = new JsonNormaliser();
     }

@@ -19,7 +19,7 @@ class YamlInline
 {
     protected $normaliser;
 
-    public function __construct(): void
+    public function __construct()
     {
         $this->normaliser = new YamlInlineNormaliser();
     }
