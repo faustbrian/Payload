@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Payload\Unserialisers;
 
 use BrianFaust\Payload\Contracts\Unserialiser;
@@ -17,7 +19,7 @@ use Symfony\Component\Yaml\Yaml;
 
 class YamlUnserialiser implements Unserialiser
 {
-    public function unserialise($input, $class = null)
+    public function unserialise($input, ? string $class) : array
     {
         $contents = Yaml::parse($input);
 

@@ -9,21 +9,22 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Tests\Payload\Unserialisers;
 
 use BrianFaust\Payload\Contracts\Unserialiser;
-use PHPUnit_Framework_TestCase as TestCase;
 
-abstract class AbstractTestCase extends TestCase
+abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
 {
-    public function should_return_unserialiser()
+    public function should_return_unserialiser(): void
     {
         $unserialiser = $this->getUnserialiser();
 
         $this->assertInstanceOf(Unserialiser::class, $unserialiser);
     }
 
-    public function should_unserialise_input()
+    public function should_unserialise_input(): void
     {
         $unserialiser = $this->getUnserialiser();
 

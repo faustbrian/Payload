@@ -9,38 +9,39 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Tests\Payload\Normalisers;
 
 use BrianFaust\Payload\Contracts\Serialiser;
 use BrianFaust\Payload\Contracts\Unserialiser;
 use BrianFaust\Payload\Readers\Reader;
 use BrianFaust\Payload\Writers\Writer;
-use PHPUnit_Framework_TestCase as TestCase;
 
-abstract class AbstractTestCase extends TestCase
+abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
 {
-    public function should_return_serialiser()
+    public function should_return_serialiser(): void
     {
         $normaliser = $this->getNormaliser();
 
         $this->assertInstanceOf(Serialiser::class, $normaliser->serialiser());
     }
 
-    public function should_return_unserialiser()
+    public function should_return_unserialiser(): void
     {
         $normaliser = $this->getNormaliser();
 
         $this->assertInstanceOf(Unserialiser::class, $normaliser->unserialiser());
     }
 
-    public function should_return_reader()
+    public function should_return_reader(): void
     {
         $normaliser = $this->getNormaliser();
 
         $this->assertInstanceOf(Reader::class, $normaliser->reader());
     }
 
-    public function should_return_writer()
+    public function should_return_writer(): void
     {
         $normaliser = $this->getNormaliser();
 

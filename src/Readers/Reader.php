@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Payload\Readers;
 
 use BrianFaust\Payload\Exceptions\InvalidFileTypeException;
@@ -18,9 +20,9 @@ abstract class Reader
 {
     protected $extensions = [];
 
-    abstract public function read($path, $class = null);
+    abstract public function read($path, $class): array;
 
-    public function check($path)
+    public function check($path): bool
     {
         $extension = File::extension($path);
 
@@ -32,14 +34,14 @@ abstract class Reader
         return true;
     }
 
-    public function contents($path)
+    public function contents($path): ? string
     {
         if ($this->check($path)) {
             return File::contents($path);
         }
     }
 
-    public function get($path)
+    public function get($path) : ? string
     {
         if ($this->check($path)) {
             return File::get($path);

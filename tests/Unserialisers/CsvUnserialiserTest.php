@@ -9,13 +9,15 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Tests\Payload\Unserialisers;
 
 use BrianFaust\Payload\Unserialisers\CsvUnserialiser;
 
 class CsvUnserialiserTest extends AbstractTestCase
 {
-    public function should_unserialise_input()
+    public function should_unserialise_input(): void
     {
         $unserialiser = $this->getUnserialiser();
 
@@ -24,14 +26,14 @@ class CsvUnserialiserTest extends AbstractTestCase
         $this->assertEquals([['hello'], ['world']], $contents);
     }
 
-    protected function getInput()
+    protected function getInput(): string
     {
         return 'hello
 world
 ';
     }
 
-    protected function getUnserialiser()
+    protected function getUnserialiser(): CsvUnserialiser
     {
         return new CsvUnserialiser();
     }

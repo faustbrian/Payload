@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Payload\Normalisers;
 
 use BrianFaust\Payload\Contracts\Normaliser;
@@ -27,7 +29,7 @@ class ArrayNormaliser implements Normaliser
 
     protected $reader;
 
-    public function serialiser()
+    public function serialiser(): ArraySerialiser
     {
         if ($this->serialiser) {
             return $this->serialiser;
@@ -36,7 +38,7 @@ class ArrayNormaliser implements Normaliser
         return $this->serialiser = new ArraySerialiser();
     }
 
-    public function unserialiser()
+    public function unserialiser(): ArrayUnserialiser
     {
         if ($this->unserialiser) {
             return $this->unserialiser;
@@ -45,7 +47,7 @@ class ArrayNormaliser implements Normaliser
         return $this->unserialiser = new ArrayUnserialiser();
     }
 
-    public function writer()
+    public function writer(): ArrayWriter
     {
         if ($this->writer) {
             return $this->writer;
@@ -54,7 +56,7 @@ class ArrayNormaliser implements Normaliser
         return $this->writer = new ArrayWriter();
     }
 
-    public function reader()
+    public function reader(): ArrayReader
     {
         if ($this->reader) {
             return $this->reader;

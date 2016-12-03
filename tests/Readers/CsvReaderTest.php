@@ -9,13 +9,15 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Tests\Payload\Readers;
 
 use BrianFaust\Payload\Readers\CsvReader;
 
 class CsvReaderTest extends AbstractTestCase
 {
-    public function should_read_file()
+    public function should_read_file(): void
     {
         $reader = $this->getReader();
 
@@ -26,12 +28,12 @@ class CsvReaderTest extends AbstractTestCase
         $this->assertEquals([['hello'], ['world']], $contents);
     }
 
-    protected function getFileExtension()
+    protected function getFileExtension(): string
     {
         return 'csv';
     }
 
-    protected function getReader()
+    protected function getReader(): CsvReader
     {
         return new CsvReader();
     }

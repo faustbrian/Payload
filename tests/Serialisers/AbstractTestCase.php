@@ -9,21 +9,22 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Tests\Payload\Serialisers;
 
 use BrianFaust\Payload\Contracts\Serialiser;
-use PHPUnit_Framework_TestCase as TestCase;
 
-abstract class AbstractTestCase extends TestCase
+abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
 {
-    public function should_return_serialiser()
+    public function should_return_serialiser(): void
     {
         $serialiser = $this->getSerialiser();
 
         $this->assertInstanceOf(Serialiser::class, $serialiser);
     }
 
-    public function should_serialise_input()
+    public function should_serialise_input(): void
     {
         $serialiser = $this->getSerialiser();
 

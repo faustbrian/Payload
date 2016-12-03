@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Payload\Normalisers;
 
 use BrianFaust\Payload\Contracts\Normaliser;
@@ -27,7 +29,7 @@ class CsvNormaliser implements Normaliser
 
     protected $reader;
 
-    public function serialiser()
+    public function serialiser(): CsvSerialiser
     {
         if ($this->serialiser) {
             return $this->serialiser;
@@ -36,7 +38,7 @@ class CsvNormaliser implements Normaliser
         return $this->serialiser = new CsvSerialiser();
     }
 
-    public function unserialiser()
+    public function unserialiser(): CsvUnserialiser
     {
         if ($this->unserialiser) {
             return $this->unserialiser;
@@ -45,7 +47,7 @@ class CsvNormaliser implements Normaliser
         return $this->unserialiser = new CsvUnserialiser();
     }
 
-    public function writer()
+    public function writer(): CsvWriter
     {
         if ($this->writer) {
             return $this->writer;
@@ -54,7 +56,7 @@ class CsvNormaliser implements Normaliser
         return $this->writer = new CsvWriter();
     }
 
-    public function reader()
+    public function reader(): CsvReader
     {
         if ($this->reader) {
             return $this->reader;

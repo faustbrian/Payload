@@ -9,21 +9,22 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Tests\Payload\Writers;
 
 use BrianFaust\Payload\Writers\Writer;
-use PHPUnit_Framework_TestCase as TestCase;
 
-abstract class AbstractTestCase extends TestCase
+abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
 {
-    public function should_return_writer()
+    public function should_return_writer(): void
     {
         $writer = $this->getWriter();
 
         $this->assertInstanceOf(Writer::class, $writer);
     }
 
-    public function should_write_file()
+    public function should_write_file(): void
     {
         $writer = $this->getWriter();
 

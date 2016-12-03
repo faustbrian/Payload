@@ -9,18 +9,20 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Tests\Payload\Readers;
 
 use BrianFaust\Payload\Readers\XmlReader;
 
 class XmlReaderTest extends AbstractTestCase
 {
-    protected function getFileExtension()
+    protected function getFileExtension(): string
     {
         return 'xml';
     }
 
-    protected function getReader()
+    protected function getReader(): XmlReader
     {
         return new XmlReader();
     }
