@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Payload.
  *
@@ -19,14 +16,14 @@ use BrianFaust\Payload\Readers\Reader;
 
 abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
 {
-    public function should_return_reader(): void
+    public function should_return_reader()
     {
         $reader = $this->getReader();
 
         $this->assertInstanceOf(Reader::class, $reader);
     }
 
-    public function should_read_file(): void
+    public function should_read_file()
     {
         $reader = $this->getReader();
 
@@ -37,7 +34,7 @@ abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
         $this->assertEquals(['hello' => 'world'], $contents);
     }
 
-    public function should_throw_exception_when_invalid_file_type(): void
+    public function should_throw_exception_when_invalid_file_type()
     {
         $this->setExpectedException(InvalidFileTypeException::class);
 

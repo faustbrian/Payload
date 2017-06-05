@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Payload.
  *
@@ -18,7 +15,7 @@ use BrianFaust\Payload\Readers\CsvReader;
 
 class CsvReaderTest extends AbstractTestCase
 {
-    public function should_read_file(): void
+    public function should_read_file()
     {
         $reader = $this->getReader();
 

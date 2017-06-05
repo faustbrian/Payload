@@ -9,7 +9,7 @@
         "homepage": "https://brianfaust.de"
     }],
     "require": {
-        "php": "^7.1",
+        "php": "^7.0",
         "league/csv": "^8.0",
         "netresearch/jsonmapper": "^1.00",
         "symfony/property-access": "^3.1",
@@ -35,7 +35,8 @@
         }
     },
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "sort-packages": true
     },
     "extra": {
         "branch-alias": {

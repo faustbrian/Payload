@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Payload.
  *
@@ -20,7 +17,7 @@ class IniReader extends Reader
 {
     protected $extensions = ['ini'];
 
-    public function read($path, ? string $class) : array
+    public function read($path, ? string $class): array
     {
         return (new IniUnserialiser())->unserialise($this->contents($path), $class);
     }

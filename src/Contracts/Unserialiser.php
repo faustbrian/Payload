@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Payload.
  *
@@ -16,5 +13,5 @@ namespace BrianFaust\Payload\Contracts;
 
 interface Unserialiser
 {
-    public function unserialise($input, ? string $class) : array;
+    public function unserialise($input, ? string $class): array;
 }

@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Payload.
  *
@@ -19,7 +16,7 @@ use BrianFaust\Payload\Utils\Mapper;
 
 class XmlUnserialiser implements Unserialiser
 {
-    public function unserialise($input, ? string $class) : array
+    public function unserialise($input, ? string $class): array
     {
         $contents = json_decode(json_encode(simplexml_load_string($input, null, LIBXML_NOCDATA)));
 

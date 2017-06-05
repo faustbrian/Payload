@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Payload.
  *
@@ -21,28 +18,28 @@ use BrianFaust\Payload\Writers\Writer;
 
 abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
 {
-    public function should_return_serialiser(): void
+    public function should_return_serialiser()
     {
         $normaliser = $this->getNormaliser();
 
         $this->assertInstanceOf(Serialiser::class, $normaliser->serialiser());
     }
 
-    public function should_return_unserialiser(): void
+    public function should_return_unserialiser()
     {
         $normaliser = $this->getNormaliser();
 
         $this->assertInstanceOf(Unserialiser::class, $normaliser->unserialiser());
     }
 
-    public function should_return_reader(): void
+    public function should_return_reader()
     {
         $normaliser = $this->getNormaliser();
 
         $this->assertInstanceOf(Reader::class, $normaliser->reader());
     }
 
-    public function should_return_writer(): void
+    public function should_return_writer()
     {
         $normaliser = $this->getNormaliser();
 

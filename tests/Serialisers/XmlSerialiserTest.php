@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Payload.
  *
@@ -18,7 +15,7 @@ use BrianFaust\Payload\Serialisers\XmlSerialiser;
 
 class XmlSerialiserTest extends AbstractTestCase
 {
-    public function should_serialise_input(): void
+    public function should_serialise_input()
     {
         $serialiser = $this->getSerialiser();
 

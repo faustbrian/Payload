@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Payload.
  *
@@ -20,7 +17,7 @@ class XmlReader extends Reader
 {
     protected $extensions = ['xml'];
 
-    public function read($path, ? string $class) : array
+    public function read($path, ? string $class): array
     {
         return (new XmlUnserialiser())->unserialise($this->contents($path), $class);
     }

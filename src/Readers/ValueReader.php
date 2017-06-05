@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Payload.
  *
@@ -20,7 +17,7 @@ class ValueReader extends Reader
 {
     protected $extensions = ['ser'];
 
-    public function read($path, ? string $class) : array
+    public function read($path, ? string $class): array
     {
         return (new ValueUnserialiser())->unserialise($this->contents($path), $class);
     }

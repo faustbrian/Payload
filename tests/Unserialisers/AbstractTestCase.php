@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Payload.
  *
@@ -18,14 +15,14 @@ use BrianFaust\Payload\Contracts\Unserialiser;
 
 abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
 {
-    public function should_return_unserialiser(): void
+    public function should_return_unserialiser()
     {
         $unserialiser = $this->getUnserialiser();
 
         $this->assertInstanceOf(Unserialiser::class, $unserialiser);
     }
 
-    public function should_unserialise_input(): void
+    public function should_unserialise_input()
     {
         $unserialiser = $this->getUnserialiser();
 

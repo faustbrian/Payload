@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Payload.
  *
@@ -42,7 +39,7 @@ abstract class Reader
         }
     }
 
-    public function get($path) : ? string
+    public function get($path): ? string
     {
         if ($this->check($path)) {
             return File::get($path);

@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Payload.
  *
@@ -20,7 +17,7 @@ use Symfony\Component\Yaml\Yaml;
 
 class YamlUnserialiser implements Unserialiser
 {
-    public function unserialise($input, ? string $class) : array
+    public function unserialise($input, ? string $class): array
     {
         $contents = Yaml::parse($input);
 
