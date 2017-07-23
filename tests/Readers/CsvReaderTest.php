@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Readers;
 
 use BrianFaust\Payload\Readers\CsvReader;
 
-class CsvReaderTest extends AbstractTestCase
+class CsvReaderTest extends TestCase
 {
     public function should_read_file()
     {

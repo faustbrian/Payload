@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Writers;
 
 use BrianFaust\Payload\Writers\CsvWriter;
 
-class CsvWriterTest extends AbstractTestCase
+class CsvWriterTest extends TestCase
 {
     protected function getExpectedOutput(): string
     {

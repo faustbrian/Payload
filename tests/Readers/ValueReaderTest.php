@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Readers;
 
 use BrianFaust\Payload\Readers\ValueReader;
 
-class ValueReaderTest extends AbstractTestCase
+class ValueReaderTest extends TestCase
 {
     protected function getFileExtension(): string
     {

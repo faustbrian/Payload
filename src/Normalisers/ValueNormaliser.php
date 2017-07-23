@@ -16,6 +16,10 @@ use BrianFaust\Payload\Readers\ValueReader;
 use BrianFaust\Payload\Serialisers\ValueSerialiser;
 use BrianFaust\Payload\Unserialisers\ValueUnserialiser;
 use BrianFaust\Payload\Writers\ValueWriter;
+use BrianFaust\Payload\Readers\Reader;
+use BrianFaust\Payload\Writers\Writer;
+use BrianFaust\Payload\Contracts\Serialiser;
+use BrianFaust\Payload\Contracts\Unserialiser;
 
 class ValueNormaliser implements Normaliser
 {
@@ -27,7 +31,7 @@ class ValueNormaliser implements Normaliser
 
     protected $reader;
 
-    public function serialiser(): ValueSerialiser
+    public function serialiser(): Serialiser
     {
         if ($this->serialiser) {
             return $this->serialiser;
@@ -36,7 +40,7 @@ class ValueNormaliser implements Normaliser
         return $this->serialiser = new ValueSerialiser();
     }
 
-    public function unserialiser(): ValueUnserialiser
+    public function unserialiser(): Unserialiser
     {
         if ($this->unserialiser) {
             return $this->unserialiser;
@@ -45,7 +49,7 @@ class ValueNormaliser implements Normaliser
         return $this->unserialiser = new ValueUnserialiser();
     }
 
-    public function writer(): ValueWriter
+    public function writer(): Writer
     {
         if ($this->writer) {
             return $this->writer;
@@ -54,7 +58,7 @@ class ValueNormaliser implements Normaliser
         return $this->writer = new ValueWriter();
     }
 
-    public function reader(): ValueReader
+    public function reader(): Reader
     {
         if ($this->reader) {
             return $this->reader;

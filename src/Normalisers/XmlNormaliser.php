@@ -16,6 +16,10 @@ use BrianFaust\Payload\Readers\XmlReader;
 use BrianFaust\Payload\Serialisers\XmlSerialiser;
 use BrianFaust\Payload\Unserialisers\XmlUnserialiser;
 use BrianFaust\Payload\Writers\XmlWriter;
+use BrianFaust\Payload\Readers\Reader;
+use BrianFaust\Payload\Writers\Writer;
+use BrianFaust\Payload\Contracts\Serialiser;
+use BrianFaust\Payload\Contracts\Unserialiser;
 
 class XmlNormaliser implements Normaliser
 {
@@ -27,7 +31,7 @@ class XmlNormaliser implements Normaliser
 
     protected $reader;
 
-    public function serialiser(): XmlSerialiser
+    public function serialiser(): Serialiser
     {
         if ($this->serialiser) {
             return $this->serialiser;
@@ -36,7 +40,7 @@ class XmlNormaliser implements Normaliser
         return $this->serialiser = new XmlSerialiser();
     }
 
-    public function unserialiser(): XmlUnserialiser
+    public function unserialiser(): Unserialiser
     {
         if ($this->unserialiser) {
             return $this->unserialiser;
@@ -45,7 +49,7 @@ class XmlNormaliser implements Normaliser
         return $this->unserialiser = new XmlUnserialiser();
     }
 
-    public function writer(): XmlWriter
+    public function writer(): Writer
     {
         if ($this->writer) {
             return $this->writer;
@@ -54,7 +58,7 @@ class XmlNormaliser implements Normaliser
         return $this->writer = new XmlWriter();
     }
 
-    public function reader(): XmlReader
+    public function reader(): Reader
     {
         if ($this->reader) {
             return $this->reader;

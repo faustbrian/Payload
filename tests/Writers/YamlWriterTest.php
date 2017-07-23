@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Writers;
 
 use BrianFaust\Payload\Writers\YamlWriter;
 
-class YamlWriterTest extends AbstractTestCase
+class YamlWriterTest extends TestCase
 {
     protected function getExpectedOutput(): string
     {

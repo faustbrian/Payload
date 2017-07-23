@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Readers;
 
 use BrianFaust\Payload\Readers\YamlReader;
 
-class YamlReaderTest extends AbstractTestCase
+class YamlReaderTest extends TestCase
 {
     protected function getFileExtension(): string
     {

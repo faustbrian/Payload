@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Readers;
 
 use BrianFaust\Payload\Readers\XmlReader;
 
-class XmlReaderTest extends AbstractTestCase
+class XmlReaderTest extends TestCase
 {
     protected function getFileExtension(): string
     {

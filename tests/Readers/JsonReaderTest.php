@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Readers;
 
 use BrianFaust\Payload\Readers\JsonReader;
 
-class JsonReaderTest extends AbstractTestCase
+class JsonReaderTest extends TestCase
 {
     protected function getFileExtension(): string
     {

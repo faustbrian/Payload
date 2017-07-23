@@ -11,7 +11,7 @@
 
 namespace BrianFaust\Payload\Serialisers;
 
-use BrianFaust\Csv\Writer;
+use League\Csv\Writer;
 use BrianFaust\Payload\Contracts\Serialiser;
 
 class CsvSerialiser implements Serialiser

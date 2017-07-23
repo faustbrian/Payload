@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Writers;
 
 use BrianFaust\Payload\Writers\JsonWriter;
 
-class JsonWriterTest extends AbstractTestCase
+class JsonWriterTest extends TestCase
 {
     protected function getExpectedOutput(): string
     {

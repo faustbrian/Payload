@@ -13,9 +13,9 @@ namespace BrianFaust\Tests\Payload\Normalisers;
 
 use BrianFaust\Payload\Normalisers\YamlInlineNormaliser;
 
-class YamlInlineNormaliserTest extends AbstractTestCase
+class YamlInlineNormaliserTest extends TestCase
 {
-    protected function getNormaliser(): YamlNormaliser
+    protected function getNormaliser(): YamlInlineNormaliser
     {
         return new YamlInlineNormaliser();
     }

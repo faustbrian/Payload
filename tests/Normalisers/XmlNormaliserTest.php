@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Normalisers;
 
 use BrianFaust\Payload\Normalisers\XmlNormaliser;
 
-class XmlNormaliserTest extends AbstractTestCase
+class XmlNormaliserTest extends TestCase
 {
     protected function getNormaliser(): XmlNormaliser
     {

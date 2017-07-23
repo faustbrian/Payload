@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Serialisers;
 
 use BrianFaust\Payload\Serialisers\YamlSerialiser;
 
-class YamlSerialiserTest extends AbstractTestCase
+class YamlSerialiserTest extends TestCase
 {
     protected function getExpectedOutput(): string
     {

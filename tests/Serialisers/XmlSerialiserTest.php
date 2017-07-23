@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Serialisers;
 
 use BrianFaust\Payload\Serialisers\XmlSerialiser;
 
-class XmlSerialiserTest extends AbstractTestCase
+class XmlSerialiserTest extends TestCase
 {
     public function should_serialise_input()
     {

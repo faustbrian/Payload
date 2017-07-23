@@ -18,7 +18,7 @@ abstract class Reader
 {
     protected $extensions = [];
 
-    abstract public function read($path, $class): array;
+    abstract public function read($path, ?string $class = null): array;
 
     public function check($path): bool
     {
@@ -32,14 +32,14 @@ abstract class Reader
         return true;
     }
 
-    public function contents($path): ? string
+    public function contents($path): ?string
     {
         if ($this->check($path)) {
             return File::contents($path);
         }
     }
 
-    public function get($path): ? string
+    public function get($path): ?array
     {
         if ($this->check($path)) {
             return File::get($path);

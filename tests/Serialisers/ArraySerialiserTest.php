@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Serialisers;
 
 use BrianFaust\Payload\Serialisers\ArraySerialiser;
 
-class ArraySerialiserTest extends AbstractTestCase
+class ArraySerialiserTest extends TestCase
 {
     protected function getExpectedOutput(): string
     {

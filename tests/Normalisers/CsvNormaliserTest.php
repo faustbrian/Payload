@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Normalisers;
 
 use BrianFaust\Payload\Normalisers\CsvNormaliser;
 
-class CsvNormaliserTest extends AbstractTestCase
+class CsvNormaliserTest extends TestCase
 {
     protected function getNormaliser(): CsvNormaliser
     {

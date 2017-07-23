@@ -27,7 +27,7 @@ class Value
         return $this->normaliser->serialiser()->serialise($input);
     }
 
-    public function unserialise($input, ?string $class): array
+    public function unserialise($input, ?string $class = null): array
     {
         return $this->normaliser->unserialiser()->unserialise($input, $class);
     }
@@ -37,7 +37,7 @@ class Value
         return $this->normaliser->writer()->write($path, $input);
     }
 
-    public function read($path, ?string $class): array
+    public function read($input, ?string $class = null): array
     {
         return $this->normaliser->reader()->read($path, $class);
     }

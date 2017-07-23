@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Serialisers;
 
 use BrianFaust\Payload\Serialisers\IniSerialiser;
 
-class IniSerialiserTest extends AbstractTestCase
+class IniSerialiserTest extends TestCase
 {
     protected function getExpectedOutput(): string
     {

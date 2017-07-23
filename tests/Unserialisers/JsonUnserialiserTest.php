@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Unserialisers;
 
 use BrianFaust\Payload\Unserialisers\JsonUnserialiser;
 
-class JsonUnserialiserTest extends AbstractTestCase
+class JsonUnserialiserTest extends TestCase
 {
     protected function getInput(): string
     {

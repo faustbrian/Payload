@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Writers;
 
 use BrianFaust\Payload\Writers\XmlWriter;
 
-class XmlWriterTest extends AbstractTestCase
+class XmlWriterTest extends TestCase
 {
     protected function getExpectedOutput(): string
     {

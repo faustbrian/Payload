@@ -15,9 +15,11 @@ use BrianFaust\Payload\Contracts\Serialiser;
 use BrianFaust\Payload\Contracts\Unserialiser;
 use BrianFaust\Payload\Readers\Reader;
 use BrianFaust\Payload\Writers\Writer;
+use PHPUnit\Framework\TestCase as BaseTestCase;
 
-abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
+abstract class TestCase extends BaseTestCase
 {
+    /** @test */
     public function should_return_serialiser()
     {
         $normaliser = $this->getNormaliser();
@@ -25,6 +27,7 @@ abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Serialiser::class, $normaliser->serialiser());
     }
 
+    /** @test */
     public function should_return_unserialiser()
     {
         $normaliser = $this->getNormaliser();
@@ -32,6 +35,7 @@ abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Unserialiser::class, $normaliser->unserialiser());
     }
 
+    /** @test */
     public function should_return_reader()
     {
         $normaliser = $this->getNormaliser();
@@ -39,6 +43,7 @@ abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Reader::class, $normaliser->reader());
     }
 
+    /** @test */
     public function should_return_writer()
     {
         $normaliser = $this->getNormaliser();

@@ -27,16 +27,16 @@ class File
 
     public static function contents($path): string
     {
-        if (self::exists($path)) {
+        if (static::exists($path)) {
             return trim(file_get_contents($path));
         }
 
         throw new FileDoesNotExistException(sprintf('%s is not a valid file', $path));
     }
 
-    public static function get($path): string
+    public static function get($path): array
     {
-        if (self::exists($path)) {
+        if (static::exists($path)) {
             return require $path;
         }
 

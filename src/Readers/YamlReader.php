@@ -17,7 +17,7 @@ class YamlReader extends Reader
 {
     protected $extensions = ['yaml', 'yml'];
 
-    public function read($path, ? string $class): array
+    public function read($path, ?string $class = null): array
     {
         return (new YamlUnserialiser())->unserialise($this->contents($path), $class);
     }

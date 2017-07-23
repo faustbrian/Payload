@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Unserialisers;
 
 use BrianFaust\Payload\Unserialisers\XmlUnserialiser;
 
-class XmlUnserialiserTest extends AbstractTestCase
+class XmlUnserialiserTest extends TestCase
 {
     protected function getInput(): string
     {

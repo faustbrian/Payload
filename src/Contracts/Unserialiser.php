@@ -13,5 +13,5 @@ namespace BrianFaust\Payload\Contracts;
 
 interface Unserialiser
 {
-    public function unserialise($input, ? string $class): array;
+    public function unserialise($input, ?string $class = null): array;
 }

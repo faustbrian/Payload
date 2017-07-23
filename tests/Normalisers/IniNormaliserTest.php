@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Normalisers;
 
 use BrianFaust\Payload\Normalisers\IniNormaliser;
 
-class IniNormaliserTest extends AbstractTestCase
+class IniNormaliserTest extends TestCase
 {
     protected function getNormaliser(): IniNormaliser
     {

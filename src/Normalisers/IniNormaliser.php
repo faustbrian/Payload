@@ -16,6 +16,10 @@ use BrianFaust\Payload\Readers\IniReader;
 use BrianFaust\Payload\Serialisers\IniSerialiser;
 use BrianFaust\Payload\Unserialisers\IniUnserialiser;
 use BrianFaust\Payload\Writers\IniWriter;
+use BrianFaust\Payload\Readers\Reader;
+use BrianFaust\Payload\Writers\Writer;
+use BrianFaust\Payload\Contracts\Serialiser;
+use BrianFaust\Payload\Contracts\Unserialiser;
 
 class IniNormaliser implements Normaliser
 {
@@ -27,7 +31,7 @@ class IniNormaliser implements Normaliser
 
     protected $reader;
 
-    public function serialiser(): IniSerialiser
+    public function serialiser(): Serialiser
     {
         if ($this->serialiser) {
             return $this->serialiser;
@@ -36,7 +40,7 @@ class IniNormaliser implements Normaliser
         return $this->serialiser = new IniSerialiser();
     }
 
-    public function unserialiser(): IniUnserialiser
+    public function unserialiser(): Unserialiser
     {
         if ($this->unserialiser) {
             return $this->unserialiser;
@@ -45,7 +49,7 @@ class IniNormaliser implements Normaliser
         return $this->unserialiser = new IniUnserialiser();
     }
 
-    public function writer(): IniWriter
+    public function writer(): Writer
     {
         if ($this->writer) {
             return $this->writer;
@@ -54,7 +58,7 @@ class IniNormaliser implements Normaliser
         return $this->writer = new IniWriter();
     }
 
-    public function reader(): IniReader
+    public function reader(): Reader
     {
         if ($this->reader) {
             return $this->reader;

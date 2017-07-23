@@ -13,9 +13,11 @@ namespace BrianFaust\Tests\Payload\Readers;
 
 use BrianFaust\Payload\Exceptions\InvalidFileTypeException;
 use BrianFaust\Payload\Readers\Reader;
+use PHPUnit\Framework\TestCase as BaseTestCase;
 
-abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
+abstract class TestCase extends BaseTestCase
 {
+    /** @test */
     public function should_return_reader()
     {
         $reader = $this->getReader();
@@ -23,6 +25,7 @@ abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Reader::class, $reader);
     }
 
+    /** @test */
     public function should_read_file()
     {
         $reader = $this->getReader();
@@ -34,6 +37,7 @@ abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
         $this->assertEquals(['hello' => 'world'], $contents);
     }
 
+    /** @test */
     public function should_throw_exception_when_invalid_file_type()
     {
         $this->setExpectedException(InvalidFileTypeException::class);

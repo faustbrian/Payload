@@ -16,7 +16,7 @@ use BrianFaust\Payload\Utils\Mapper;
 
 class ValueUnserialiser implements Unserialiser
 {
-    public function unserialise($input, ? string $class): array
+    public function unserialise($input, ?string $class = null): array
     {
         $contents = unserialize($input);
 

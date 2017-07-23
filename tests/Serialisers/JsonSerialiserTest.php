@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Serialisers;
 
 use BrianFaust\Payload\Serialisers\JsonSerialiser;
 
-class JsonSerialiserTest extends AbstractTestCase
+class JsonSerialiserTest extends TestCase
 {
     protected function getExpectedOutput(): string
     {

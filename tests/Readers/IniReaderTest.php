@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Readers;
 
 use BrianFaust\Payload\Readers\IniReader;
 
-class IniReaderTest extends AbstractTestCase
+class IniReaderTest extends TestCase
 {
     protected function getFileExtension(): string
     {

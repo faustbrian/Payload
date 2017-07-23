@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Writers;
 
 use BrianFaust\Payload\Writers\IniWriter;
 
-class IniWriterTest extends AbstractTestCase
+class IniWriterTest extends TestCase
 {
     protected function getExpectedOutput(): string
     {

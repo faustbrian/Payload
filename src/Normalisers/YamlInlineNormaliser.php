@@ -16,6 +16,10 @@ use BrianFaust\Payload\Readers\YamlReader;
 use BrianFaust\Payload\Serialisers\YamlInlineSerialiser;
 use BrianFaust\Payload\Unserialisers\YamlUnserialiser;
 use BrianFaust\Payload\Writers\YamlInlineWriter;
+use BrianFaust\Payload\Readers\Reader;
+use BrianFaust\Payload\Writers\Writer;
+use BrianFaust\Payload\Contracts\Serialiser;
+use BrianFaust\Payload\Contracts\Unserialiser;
 
 class YamlInlineNormaliser implements Normaliser
 {
@@ -27,7 +31,7 @@ class YamlInlineNormaliser implements Normaliser
 
     protected $reader;
 
-    public function serialiser(): YamlSerialiser
+    public function serialiser(): Serialiser
     {
         if ($this->serialiser) {
             return $this->serialiser;
@@ -36,7 +40,7 @@ class YamlInlineNormaliser implements Normaliser
         return $this->serialiser = new YamlInlineSerialiser();
     }
 
-    public function unserialiser(): YamlUnserialiser
+    public function unserialiser(): Unserialiser
     {
         if ($this->unserialiser) {
             return $this->unserialiser;
@@ -45,7 +49,7 @@ class YamlInlineNormaliser implements Normaliser
         return $this->unserialiser = new YamlUnserialiser();
     }
 
-    public function writer(): YamlWriter
+    public function writer(): Writer
     {
         if ($this->writer) {
             return $this->writer;
@@ -54,7 +58,7 @@ class YamlInlineNormaliser implements Normaliser
         return $this->writer = new YamlInlineWriter();
     }
 
-    public function reader(): YamlReader
+    public function reader(): Reader
     {
         if ($this->reader) {
             return $this->reader;

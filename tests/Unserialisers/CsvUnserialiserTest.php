@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Unserialisers;
 
 use BrianFaust\Payload\Unserialisers\CsvUnserialiser;
 
-class CsvUnserialiserTest extends AbstractTestCase
+class CsvUnserialiserTest extends TestCase
 {
     public function should_unserialise_input()
     {

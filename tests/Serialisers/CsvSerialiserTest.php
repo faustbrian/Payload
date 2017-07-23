@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Serialisers;
 
 use BrianFaust\Payload\Serialisers\CsvSerialiser;
 
-class CsvSerialiserTest extends AbstractTestCase
+class CsvSerialiserTest extends TestCase
 {
     protected function getExpectedOutput(): string
     {

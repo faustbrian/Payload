@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Normalisers;
 
 use BrianFaust\Payload\Normalisers\ArrayNormaliser;
 
-class ArrayNormaliserTest extends AbstractTestCase
+class ArrayNormaliserTest extends TestCase
 {
     protected function getNormaliser(): ArrayNormaliser
     {

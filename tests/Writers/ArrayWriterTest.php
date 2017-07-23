@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Writers;
 
 use BrianFaust\Payload\Writers\ArrayWriter;
 
-class ArrayWriterTest extends AbstractTestCase
+class ArrayWriterTest extends TestCase
 {
     protected function getExpectedOutput(): string
     {

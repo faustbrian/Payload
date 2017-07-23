@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Unserialisers;
 
 use BrianFaust\Payload\Unserialisers\IniUnserialiser;
 
-class IniUnserialiserTest extends AbstractTestCase
+class IniUnserialiserTest extends TestCase
 {
     protected function getInput(): string
     {

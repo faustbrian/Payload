@@ -17,7 +17,7 @@ use BrianFaust\Payload\Utils\Mapper;
 
 class CsvUnserialiser implements Unserialiser
 {
-    public function unserialise($input, ? string $class): array
+    public function unserialise($input, ?string $class = null): array
     {
         $reader = Reader::createFromString($input);
 

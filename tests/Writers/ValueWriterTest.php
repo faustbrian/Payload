@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Writers;
 
 use BrianFaust\Payload\Writers\ValueWriter;
 
-class ValueWriterTest extends AbstractTestCase
+class ValueWriterTest extends TestCase
 {
     protected function getExpectedOutput(): string
     {

@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Normalisers;
 
 use BrianFaust\Payload\Normalisers\JsonNormaliser;
 
-class JsonNormaliserTest extends AbstractTestCase
+class JsonNormaliserTest extends TestCase
 {
     protected function getNormaliser(): JsonNormaliser
     {

@@ -17,7 +17,7 @@ use Symfony\Component\Yaml\Yaml;
 
 class YamlUnserialiser implements Unserialiser
 {
-    public function unserialise($input, ? string $class): array
+    public function unserialise($input, ?string $class = null): array
     {
         $contents = Yaml::parse($input);
 

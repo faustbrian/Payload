@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Unserialisers;
 
 use BrianFaust\Payload\Unserialisers\YamlUnserialiser;
 
-class YamlUnserialiserTest extends AbstractTestCase
+class YamlUnserialiserTest extends TestCase
 {
     protected function getInput(): string
     {

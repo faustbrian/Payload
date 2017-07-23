@@ -12,9 +12,11 @@
 namespace BrianFaust\Tests\Payload\Writers;
 
 use BrianFaust\Payload\Writers\Writer;
+use PHPUnit\Framework\TestCase as BaseTestCase;
 
-abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
+abstract class TestCase extends BaseTestCase
 {
+    /** @test */
     public function should_return_writer()
     {
         $writer = $this->getWriter();
@@ -22,6 +24,7 @@ abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Writer::class, $writer);
     }
 
+    /** @test */
     public function should_write_file()
     {
         $writer = $this->getWriter();

@@ -16,6 +16,10 @@ use BrianFaust\Payload\Readers\JsonReader;
 use BrianFaust\Payload\Serialisers\JsonSerialiser;
 use BrianFaust\Payload\Unserialisers\JsonUnserialiser;
 use BrianFaust\Payload\Writers\JsonWriter;
+use BrianFaust\Payload\Readers\Reader;
+use BrianFaust\Payload\Writers\Writer;
+use BrianFaust\Payload\Contracts\Serialiser;
+use BrianFaust\Payload\Contracts\Unserialiser;
 
 class JsonNormaliser implements Normaliser
 {
@@ -27,7 +31,7 @@ class JsonNormaliser implements Normaliser
 
     protected $reader;
 
-    public function serialiser(): JsonSerialiser
+    public function serialiser(): Serialiser
     {
         if ($this->serialiser) {
             return $this->serialiser;
@@ -36,7 +40,7 @@ class JsonNormaliser implements Normaliser
         return $this->serialiser = new JsonSerialiser();
     }
 
-    public function unserialiser(): JsonUnserialiser
+    public function unserialiser(): Unserialiser
     {
         if ($this->unserialiser) {
             return $this->unserialiser;
@@ -45,7 +49,7 @@ class JsonNormaliser implements Normaliser
         return $this->unserialiser = new JsonUnserialiser();
     }
 
-    public function writer(): JsonWriter
+    public function writer(): Writer
     {
         if ($this->writer) {
             return $this->writer;
@@ -54,7 +58,7 @@ class JsonNormaliser implements Normaliser
         return $this->writer = new JsonWriter();
     }
 
-    public function reader(): JsonReader
+    public function reader(): Reader
     {
         if ($this->reader) {
             return $this->reader;

@@ -13,7 +13,7 @@ namespace BrianFaust\Tests\Payload\Normalisers;
 
 use BrianFaust\Payload\Normalisers\YamlNormaliser;
 
-class YamlNormaliserTest extends AbstractTestCase
+class YamlNormaliserTest extends TestCase
 {
     protected function getNormaliser(): YamlNormaliser
     {

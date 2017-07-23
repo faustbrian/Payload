@@ -12,9 +12,11 @@
 namespace BrianFaust\Tests\Payload\Serialisers;
 
 use BrianFaust\Payload\Contracts\Serialiser;
+use PHPUnit\Framework\TestCase as BaseTestCase;
 
-abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
+abstract class TestCase extends BaseTestCase
 {
+    /** @test */
     public function should_return_serialiser()
     {
         $serialiser = $this->getSerialiser();
@@ -22,6 +24,7 @@ abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Serialiser::class, $serialiser);
     }
 
+    /** @test */
     public function should_serialise_input()
     {
         $serialiser = $this->getSerialiser();
