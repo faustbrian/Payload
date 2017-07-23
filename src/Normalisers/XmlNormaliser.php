@@ -11,15 +11,15 @@
 
 namespace BrianFaust\Payload\Normalisers;
 
-use BrianFaust\Payload\Contracts\Normaliser;
-use BrianFaust\Payload\Readers\XmlReader;
-use BrianFaust\Payload\Serialisers\XmlSerialiser;
-use BrianFaust\Payload\Unserialisers\XmlUnserialiser;
-use BrianFaust\Payload\Writers\XmlWriter;
 use BrianFaust\Payload\Readers\Reader;
 use BrianFaust\Payload\Writers\Writer;
+use BrianFaust\Payload\Readers\XmlReader;
+use BrianFaust\Payload\Writers\XmlWriter;
+use BrianFaust\Payload\Contracts\Normaliser;
 use BrianFaust\Payload\Contracts\Serialiser;
 use BrianFaust\Payload\Contracts\Unserialiser;
+use BrianFaust\Payload\Serialisers\XmlSerialiser;
+use BrianFaust\Payload\Unserialisers\XmlUnserialiser;
 
 class XmlNormaliser implements Normaliser
 {

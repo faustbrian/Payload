@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Payload\Serialisers;
 
-use BrianFaust\Payload\Contracts\Serialiser;
 use Symfony\Component\Yaml\Dumper;
+use BrianFaust\Payload\Contracts\Serialiser;
 
 class YamlSerialiser implements Serialiser
 {

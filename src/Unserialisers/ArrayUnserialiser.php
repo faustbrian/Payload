@@ -11,18 +11,18 @@
 
 namespace BrianFaust\Payload\Unserialisers;
 
-use BrianFaust\Payload\Contracts\Unserialiser;
 use BrianFaust\Payload\Utils\Mapper;
+use BrianFaust\Payload\Contracts\Unserialiser;
 
 class ArrayUnserialiser implements Unserialiser
 {
     public function unserialise($input, ?string $class = null): array
     {
-        if (!is_array($input)) {
+        if (! is_array($input)) {
             $input = eval("return $input;");
         }
 
-        if (!is_null($class)) {
+        if (! is_null($class)) {
             return (new Mapper())->map($input, $class);
         }
 

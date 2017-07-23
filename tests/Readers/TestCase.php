@@ -11,9 +11,9 @@
 
 namespace BrianFaust\Tests\Payload\Readers;
 
-use BrianFaust\Payload\Exceptions\InvalidFileTypeException;
 use BrianFaust\Payload\Readers\Reader;
 use PHPUnit\Framework\TestCase as BaseTestCase;
+use BrianFaust\Payload\Exceptions\InvalidFileTypeException;
 
 abstract class TestCase extends BaseTestCase
 {

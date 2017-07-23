@@ -11,9 +11,9 @@
 
 namespace BrianFaust\Tests\Payload\Utils;
 
-use BrianFaust\Payload\Exceptions\FileDoesNotExistException;
-use BrianFaust\Payload\Utils\File;
 use PHPUnit\Framework\TestCase;
+use BrianFaust\Payload\Utils\File;
+use BrianFaust\Payload\Exceptions\FileDoesNotExistException;
 
 class FileTest extends TestCase
 {

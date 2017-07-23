@@ -11,15 +11,15 @@
 
 namespace BrianFaust\Payload\Normalisers;
 
-use BrianFaust\Payload\Contracts\Normaliser;
-use BrianFaust\Payload\Readers\YamlReader;
-use BrianFaust\Payload\Serialisers\YamlInlineSerialiser;
-use BrianFaust\Payload\Unserialisers\YamlUnserialiser;
-use BrianFaust\Payload\Writers\YamlInlineWriter;
 use BrianFaust\Payload\Readers\Reader;
 use BrianFaust\Payload\Writers\Writer;
+use BrianFaust\Payload\Readers\YamlReader;
+use BrianFaust\Payload\Contracts\Normaliser;
 use BrianFaust\Payload\Contracts\Serialiser;
 use BrianFaust\Payload\Contracts\Unserialiser;
+use BrianFaust\Payload\Writers\YamlInlineWriter;
+use BrianFaust\Payload\Unserialisers\YamlUnserialiser;
+use BrianFaust\Payload\Serialisers\YamlInlineSerialiser;
 
 class YamlInlineNormaliser implements Normaliser
 {

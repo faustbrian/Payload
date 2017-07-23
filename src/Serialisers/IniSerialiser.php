@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Payload\Serialisers;
 
-use BrianFaust\Payload\Contracts\Serialiser;
 use BrianFaust\Payload\Utils\IniBuilder;
+use BrianFaust\Payload\Contracts\Serialiser;
 
 class IniSerialiser implements Serialiser
 {

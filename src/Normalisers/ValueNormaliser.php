@@ -11,15 +11,15 @@
 
 namespace BrianFaust\Payload\Normalisers;
 
-use BrianFaust\Payload\Contracts\Normaliser;
-use BrianFaust\Payload\Readers\ValueReader;
-use BrianFaust\Payload\Serialisers\ValueSerialiser;
-use BrianFaust\Payload\Unserialisers\ValueUnserialiser;
-use BrianFaust\Payload\Writers\ValueWriter;
 use BrianFaust\Payload\Readers\Reader;
 use BrianFaust\Payload\Writers\Writer;
+use BrianFaust\Payload\Readers\ValueReader;
+use BrianFaust\Payload\Writers\ValueWriter;
+use BrianFaust\Payload\Contracts\Normaliser;
 use BrianFaust\Payload\Contracts\Serialiser;
 use BrianFaust\Payload\Contracts\Unserialiser;
+use BrianFaust\Payload\Serialisers\ValueSerialiser;
+use BrianFaust\Payload\Unserialisers\ValueUnserialiser;
 
 class ValueNormaliser implements Normaliser
 {

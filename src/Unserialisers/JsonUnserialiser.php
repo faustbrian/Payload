@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Payload\Unserialisers;
 
-use BrianFaust\Payload\Contracts\Unserialiser;
 use BrianFaust\Payload\Utils\Mapper;
+use BrianFaust\Payload\Contracts\Unserialiser;
 
 class JsonUnserialiser implements Unserialiser
 {
@@ -20,7 +20,7 @@ class JsonUnserialiser implements Unserialiser
     {
         $contents = json_decode($input);
 
-        if (!is_null($class)) {
+        if (! is_null($class)) {
             return (new Mapper())->map($contents, $class);
         }
 
