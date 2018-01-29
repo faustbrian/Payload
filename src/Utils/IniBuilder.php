@@ -42,7 +42,7 @@ class IniBuilder
                         $valueOutput .= "{$prevKey}[] = {$valStr}\n";
                     }
 
-                    ++$position;
+                    $position++;
                 } else {
                     $valueOutput .= "{$key} = {$valStr}\n";
                 }
