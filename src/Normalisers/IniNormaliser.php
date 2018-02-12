@@ -13,15 +13,15 @@ declare(strict_types=1);
 
 namespace BrianFaust\Payload\Normalisers;
 
-use BrianFaust\Payload\Readers\Reader;
-use BrianFaust\Payload\Writers\Writer;
-use BrianFaust\Payload\Readers\IniReader;
-use BrianFaust\Payload\Writers\IniWriter;
 use BrianFaust\Payload\Contracts\Normaliser;
 use BrianFaust\Payload\Contracts\Serialiser;
 use BrianFaust\Payload\Contracts\Unserialiser;
+use BrianFaust\Payload\Readers\IniReader;
+use BrianFaust\Payload\Readers\Reader;
 use BrianFaust\Payload\Serialisers\IniSerialiser;
 use BrianFaust\Payload\Unserialisers\IniUnserialiser;
+use BrianFaust\Payload\Writers\IniWriter;
+use BrianFaust\Payload\Writers\Writer;
 
 class IniNormaliser implements Normaliser
 {

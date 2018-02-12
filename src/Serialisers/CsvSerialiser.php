@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace BrianFaust\Payload\Serialisers;
 
-use League\Csv\Writer;
 use BrianFaust\Payload\Contracts\Serialiser;
+use League\Csv\Writer;
 
 class CsvSerialiser implements Serialiser
 {

@@ -13,15 +13,15 @@ declare(strict_types=1);
 
 namespace BrianFaust\Payload\Normalisers;
 
-use BrianFaust\Payload\Readers\Reader;
-use BrianFaust\Payload\Writers\Writer;
-use BrianFaust\Payload\Readers\CsvReader;
-use BrianFaust\Payload\Writers\CsvWriter;
 use BrianFaust\Payload\Contracts\Normaliser;
 use BrianFaust\Payload\Contracts\Serialiser;
 use BrianFaust\Payload\Contracts\Unserialiser;
+use BrianFaust\Payload\Readers\CsvReader;
+use BrianFaust\Payload\Readers\Reader;
 use BrianFaust\Payload\Serialisers\CsvSerialiser;
 use BrianFaust\Payload\Unserialisers\CsvUnserialiser;
+use BrianFaust\Payload\Writers\CsvWriter;
+use BrianFaust\Payload\Writers\Writer;
 
 class CsvNormaliser implements Normaliser
 {

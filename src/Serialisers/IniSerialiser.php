@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace BrianFaust\Payload\Serialisers;
 
-use BrianFaust\Payload\Utils\IniBuilder;
 use BrianFaust\Payload\Contracts\Serialiser;
+use BrianFaust\Payload\Utils\IniBuilder;
 
 class IniSerialiser implements Serialiser
 {

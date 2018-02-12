@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace BrianFaust\Payload\Serialisers;
 
-use Symfony\Component\Yaml\Dumper;
 use BrianFaust\Payload\Contracts\Serialiser;
+use Symfony\Component\Yaml\Dumper;
 
 class YamlSerialiser implements Serialiser
 {

@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace BrianFaust\Tests\Payload\Normalisers;
 
-use BrianFaust\Payload\Readers\Reader;
-use BrianFaust\Payload\Writers\Writer;
 use BrianFaust\Payload\Contracts\Serialiser;
 use BrianFaust\Payload\Contracts\Unserialiser;
+use BrianFaust\Payload\Readers\Reader;
+use BrianFaust\Payload\Writers\Writer;
 use PHPUnit\Framework\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase

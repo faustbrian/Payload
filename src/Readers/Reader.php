@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace BrianFaust\Payload\Readers;
 
-use BrianFaust\Payload\Utils\File;
 use BrianFaust\Payload\Exceptions\InvalidFileTypeException;
+use BrianFaust\Payload\Utils\File;
 
 abstract class Reader
 {
@@ -26,7 +26,7 @@ abstract class Reader
     {
         $extension = File::extension($path);
 
-        if (! in_array($extension, $this->extensions)) {
+        if (!in_array($extension, $this->extensions)) {
             throw new InvalidFileTypeException(
                 sprintf('%s is an invalid file type for the %s class', $extension, get_class($this)));
         }
