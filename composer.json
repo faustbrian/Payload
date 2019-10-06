@@ -10,7 +10,7 @@
     }],
     "require": {
         "php": "^7.1",
-        "league/csv": "^8.0",
+        "league/csv": "^9.0.0",
         "netresearch/jsonmapper": "^1.00",
         "symfony/property-access": "^3.1",
         "symfony/serializer": "^3.1",
